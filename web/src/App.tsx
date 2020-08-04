@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import "./styles/global.css";
+import './styles/global.css';
 
-import Routes from "./routes/routes";
+import Routes from './routes/routes';
 
 const App = () => <Routes />;
 
