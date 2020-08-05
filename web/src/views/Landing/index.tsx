@@ -1,12 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-
-import logo from "../../assets/images/logo.svg";
-import landing from "../../assets/images/landing.svg";
-import studyIcon from "../../assets/images/icons/study.svg";
-import giveClassesIcon from "../../assets/images/icons/give-classes.svg";
-import purpleHeartIcon from "../../assets/images/icons/purple-heart.svg";
+import logo from '../../assets/images/logo.svg';
+import landing from '../../assets/images/landing.svg';
+import studyIcon from '../../assets/images/icons/study.svg';
+import giveClassesIcon from '../../assets/images/icons/give-classes.svg';
+import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg';
 
 import './styles.css';
 
@@ -31,8 +30,8 @@ const Landing = () => (
       </div>
 
       <span className="total-connections">
-        Total de 200 conexões já realizadas 
-        <img src={purpleHeartIcon} alt="Purple heart"/>
+        Total de 200 conexões já realizadas
+        <img src={purpleHeartIcon} alt="Purple heart" />
       </span>
     </div>
   </div>
