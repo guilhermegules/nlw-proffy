@@ -18,3 +18,16 @@ Basicamente são funções ou classes que irão retornar HTML para ser mostrado 
 - Utilizado para aplicações responsivas, quando definimos o font-size do root com alguma porcentagem, nesse caso 60%;
 - Lembrando que o tamanho de fonte padrão são 16px;
 - quando utilizamos 1.6rem vamos utilizar 60% de 16px vezes 6; 
+
+## Back-end | API
+- Frontend envia mensagem para o Backend utilizando o protocolo HTTP com Cabeçalho / Corpo e o Backend recebe essa mensagem e ele faz algumas operações baseado nas mensagens
+
+## Request Body
+- Dados para criação ou atualização de um registro
+
+## Route Params
+- Identificar qual recurso eu quero atualizar ou deletar
+
+## Query Params
+- Utilizado para filtrar items, paginação e ordenação
+- Exemplo: `http://localhost:3333/users?page=2`
