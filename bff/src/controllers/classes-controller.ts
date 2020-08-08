@@ -10,8 +10,12 @@ export default class ClassesController {
     const filters = request.query
 
     const subject = filters.subject as string
-    const weekDay = filters.week_day as string
+    const weekDay = filters.weekDay as string
     const time = filters.time as string
+
+    console.log(subject)
+    console.log(weekDay)
+    console.log(time)
 
     if (!subject || !weekDay || !time) {
       return response.status(400).json({
@@ -25,13 +29,13 @@ export default class ClassesController {
       .whereExists(function () {
         this.select('class_schedule.*')
           .from('class_schedule')
-          .whereRaw('`class_schedule`.`class_id` = `classes`.`id`')
-          .whereRaw('`class_schedule`.`week_day` = ??', [Number(weekDay)])
+          .whereRaw('`class_schedule`.`classId` = `classes`.`id`')
+          .whereRaw('`class_schedule`.`weekDay` = ??', [Number(weekDay)])
           .whereRaw('`class_schedule`.`from` <= ??', [timeInMinutes])
-          .whereRaw('`class_schedule`.`from` > ??', [timeInMinutes])
+          .whereRaw('`class_schedule`.`to` > ??', [timeInMinutes])
       })
       .where('classes.subject', '=', subject)
-      .join('users', 'classes.user_id', '=', 'users.id')
+      .join('users', 'classes.userId', '=', 'users.id')
       .select(['classes.*', 'users.*'])
 
     return response.json(classes)
@@ -83,8 +87,6 @@ export default class ClassesController {
 
       return response.status(201).send()
     } catch (error) {
-      console.log(error)
-
       await trx.rollback()
 
       return response.status(400).json({

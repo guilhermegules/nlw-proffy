@@ -1,8 +1,8 @@
-import express from 'express'
+import { Router } from 'express'
 import ClassesController from '../controllers/classes-controller'
 import ConnectionsController from '../controllers/connections-controller'
 
-const routes = express.Router()
+const routes = Router()
 
 const classesControllers = new ClassesController()
 const connectionsControllers = new ConnectionsController()

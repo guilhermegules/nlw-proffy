@@ -12,10 +12,36 @@
     "sourceType": "module"
   },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "prettier"
   ],
   "rules": {
     "no-unused-vars": "off",
-    "space-before-function-paren": "off"
+    "space-before-function-paren": "off",
+    "no-console": "warn",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "enum",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "enumMember",
+        "format": ["UPPER_CASE"]
+      },
+      {
+        "selector": "property",
+        "modifiers": ["readonly"],
+        "format": ["UPPER_CASE"]
+      },
+      {
+        "selector": "memberLike",
+        "format": ["camelCase"]
+      }
+    ]
   }
 }
