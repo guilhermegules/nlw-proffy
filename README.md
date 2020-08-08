@@ -1,33 +1,57 @@
-# Proffy Project
+<h1 align="center">Proffy Project</h1>
+<div align="center">
+ <img src="./web/src/assets/images/landing.svg">
+ :rocket: app to connect students to teachers.
+</div>
 
-## O que é React.js
+## 🖥️ Technologies:
 
-- É uma biblioteca de para o construção de interfaces;
-- Criação de SPA (Single Page Application), assim melhorando a experiência do usuário;
-- React / ReactJS (React DOM) / React Native;
-- Interface da applicação será gerada a partir do JavaScript;
-- O react vai utilizar o que escrevemos com javascript e deposita no DOM os nossos componenentes React;
+In this project will be applied these techs:
 
-### Componentes React:
-Basicamente são funções ou classes que irão retornar HTML para ser mostrado na nossa página;
+- Node.js <img src="https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png" width="30" height="30" align="center">;
+- React.js <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="40" height="30" align="center">;
+- React Native <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="40" height="30" align="center">;
+- Typescript <img src="https://cdn.iconscout.com/icon/free/png-512/typescript-1174965.png" width="30" height="30" align="center">.
 
-### JSX
-- Javascript + XML
+## Running:
 
-### rem
-- Utilizado para aplicações responsivas, quando definimos o font-size do root com alguma porcentagem, nesse caso 60%;
-- Lembrando que o tamanho de fonte padrão são 16px;
-- quando utilizamos 1.6rem vamos utilizar 60% de 16px vezes 6; 
+### :octocat: Download project
 
-## Back-end | API
-- Frontend envia mensagem para o Backend utilizando o protocolo HTTP com Cabeçalho / Corpo e o Backend recebe essa mensagem e ele faz algumas operações baseado nas mensagens
+```
+  # Clone this project
+  git clone https://github.com/guilhermegules/nlw-proffy.git
+```
 
-## Request Body
-- Dados para criação ou atualização de um registro
+### :computer: Run web Application:
 
-## Route Params
-- Identificar qual recurso eu quero atualizar ou deletar
+```
+  # Go to web folder
+  cd web/
 
-## Query Params
-- Utilizado para filtrar items, paginação e ordenação
-- Exemplo: `http://localhost:3333/users?page=2`
+  # Install dependencies
+  npm install or yarn
+
+  # Run application
+  npm start or yarn start
+```
+
+Aplication located on `http://localhost:3000`
+
+### 📨 Run Server:
+
+```
+  # Got to bff folder
+  cd bff/
+
+  # Install dependencies
+  npm install or yarn
+
+  # Run server
+  npm start or yarn start
+```
+
+### :iphone: Run Mobile Application:
+
+```
+  Building
+```

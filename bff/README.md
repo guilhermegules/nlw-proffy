@@ -1,13 +1,30 @@
 # BFF | Server
 
-## Rodar a aplicação:
-
-- `npm install` for install all dependencies;
-- `npm start` for running dev application;
+> The brain of application 🧠
 
 ## What was used:
 
-// TODO
+- cors;
+- dotenv;
+- express;
+- knex;
+- prettier;
+- sqlite3;
+- typescript;
+- eslint.
+
+## Scripts:
+
+```
+  # Comand to run dev server
+  npm start
+
+  # Comand to create a migration
+  npm run knex:migrate
+
+  # Comand to revert a migration
+  npm run knex:migrate:rollback
+```
 
 ## Diagram of node Architecture
 
@@ -19,11 +36,11 @@
 
 ### Connections
 
-- [] End point for list all connections;
-- [] End point for make a connection;
+- [x] End point for list all connections;
+- [x] End point for make a connection;
 
 ### Aulas
 
-- [] End point for create one class route;
-- [] End point for list all classes;
-  - [] Filter class by discipline, week day, hour;
+- [x] End point for create one class route;
+- [x] End point for list all classes;
+  - [x] Filter class by discipline, week day, hour;
