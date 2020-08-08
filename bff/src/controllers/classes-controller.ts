@@ -13,10 +13,6 @@ export default class ClassesController {
     const weekDay = filters.weekDay as string
     const time = filters.time as string
 
-    console.log(subject)
-    console.log(weekDay)
-    console.log(time)
-
     if (!subject || !weekDay || !time) {
       return response.status(400).json({
         error: 'Missing filters to search classes'
