@@ -1,17 +1,19 @@
 <h1 align="center">Proffy Project</h1>
-<div align="center">
+<p align="center">
  <img src="./web/src/assets/images/landing.svg">
- :rocket: app to connect students to teachers.
-</div>
+</p>
+<p align="center">
+:rocket: app to connect students to teachers.
+</p>
 
 ## 🖥️ Technologies:
 
 In this project will be applied these techs:
 
-- Node.js <img src="https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png" width="30" height="30" align="center">;
-- React.js <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="40" height="30" align="center">;
-- React Native <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="40" height="30" align="center">;
-- Typescript <img src="https://cdn.iconscout.com/icon/free/png-512/typescript-1174965.png" width="30" height="30" align="center">.
+- Node.js <img src="https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png" width="30" height="30" align="center">
+- React.js <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="40" height="30" align="center">
+- React Native <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="40" height="30" align="center">
+- Typescript <img src="https://cdn.iconscout.com/icon/free/png-512/typescript-1174965.png" width="30" height="30" align="center">
 
 ## Running:
 
