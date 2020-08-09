@@ -6,8 +6,8 @@ import { SelectProps } from '../../interfaces/select.interface';
 const Select: FC<SelectProps> = ({ label, name, options, ...attributes }) => (
   <div className="select-block">
     <label htmlFor={name}>{label}</label>
-    <select id={name} {...attributes}>
-      <option value="" disabled selected hidden>
+    <select value="" id={name} {...attributes}>
+      <option value="" disabled hidden>
         Selecione uma opção
       </option>
       {options.map(option => (
