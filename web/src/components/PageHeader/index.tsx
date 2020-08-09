@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import backIcon from '../../assets/images/icons/back.svg';
@@ -7,7 +7,7 @@ import { PageHeaderProps } from '../../interfaces/page-header.interface';
 
 import './styles.css';
 
-const PageHeader: React.FC<PageHeaderProps> = ({ title, children }) => (
+const PageHeader: FC<PageHeaderProps> = ({ title, children, description }) => (
   <header>
     <div className="page-header">
       <div className="top-bar-container">
@@ -19,6 +19,8 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, children }) => (
 
       <div className="header-content">
         <strong>{title}</strong>
+        {description && <p>{description}</p>}
+
         {children}
       </div>
     </div>

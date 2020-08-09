@@ -23,7 +23,7 @@
 }
 
 .teacher-item header div strong {
-  font: 700 2.4rem 'Archivo Narrow', sans-serif;
+  font: 700 2.4rem var(--font-archivo);
   display: block;
   color: var(--color-text-title);
 }
@@ -59,12 +59,12 @@
 .teacher-item footer button {
   width: 20rem;
   height: 5.6rem;
-  background-color: var(--color-secundary);
+  background-color: var(--color-secondary);
   color: var(--color-button-text);
   border: 0;
   border-radius: 0.8rem;
   cursor: pointer;
-  font: 700 1.4rem 'Archivo Narrow', sans-serif;
+  font: 700 1.4rem var(--font-archivo);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -72,7 +72,7 @@
 }
 
 .teacher-item footer button:hover {
-  background-color: var(--color-secundary-dark);
+  background-color: var(--color-secondary-dark);
 }
 
 @media (min-width: 700px) {
@@ -99,5 +99,9 @@
 
   .teacher-item footer button image {
     margin-right: 1.6rem;
+  }
+
+  .teacher-item footer button span {
+    margin-left: 1rem;
   }
 }
