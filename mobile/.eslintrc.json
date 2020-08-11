@@ -46,7 +46,7 @@
       {
         "selector": "memberLike",
         "format": ["camelCase"]
-      }
+      },
     ],
     "semi": "off",
     "quotes": "warn",
