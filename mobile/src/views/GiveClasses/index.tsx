@@ -6,12 +6,12 @@ import giveClassesBgImage from '../../assets/images/give-classes-background.png'
 import styles from './styles';
 import { useNavigation } from '@react-navigation/native';
 
-export default function GiveClasses() {
+const GiveClasses = () => {
   const { goBack } = useNavigation();
 
-  function handleNavigateBack() {
+  const handleNavigateBack = () => {
     goBack();
-  }
+  };
 
   return (
     <View style={styles.container}>
@@ -26,4 +26,6 @@ export default function GiveClasses() {
       </RectButton>
     </View>
   );
-}
+};
+
+export default GiveClasses;

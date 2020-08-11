@@ -9,12 +9,16 @@ import studyIcon from '../../assets/images/icons/study.png';
 import giveClassesIcon from '../../assets/images/icons/give-classes.png';
 import heartIcon from '../../assets/images/icons/heart.png';
 
-export default function Landing() {
+const Landing = () => {
   const { navigate } = useNavigation();
 
-  function handleNavigateToGiveClassesPage() {
+  const handleNavigateToGiveClassesPage = () => {
     navigate('GiveClasses');
-  }
+  };
+
+  const handleNavigateToStudyPages = () => {
+    navigate('Study');
+  };
 
   return (
     <View style={styles.container}>
@@ -25,7 +29,7 @@ export default function Landing() {
       </Text>
 
       <View style={styles.buttonsContainer}>
-        <RectButton style={[styles.button, styles.buttonPrimary]}>
+        <RectButton onPress={handleNavigateToStudyPages} style={[styles.button, styles.buttonPrimary]}>
           <Image source={studyIcon} />
           <Text style={styles.buttonText}>Estudar</Text>
         </RectButton>
@@ -40,4 +44,6 @@ export default function Landing() {
       </Text>
     </View>
   );
-}
+};
+
+export default Landing;
