@@ -8,7 +8,7 @@ import logoImg from '../../assets/images/logo.png';
 import { PageHeaderProps } from '../../interfaces/page-header.interface';
 import { useNavigation } from '@react-navigation/native';
 
-const PageHeader: FC<PageHeaderProps> = ({ title }) => {
+const PageHeader: FC<PageHeaderProps> = ({ title, children }) => {
   const { navigate } = useNavigation();
 
   const handleGoBack = () => {
@@ -26,6 +26,8 @@ const PageHeader: FC<PageHeaderProps> = ({ title }) => {
       </View>
 
       <Text style={styles.title}>{title}</Text>
+
+      {children}
     </View>
   );
 };
