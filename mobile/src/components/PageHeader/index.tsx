@@ -8,7 +8,7 @@ import logoImg from '../../assets/images/logo.png';
 import { PageHeaderProps } from '../../interfaces/page-header.interface';
 import { useNavigation } from '@react-navigation/native';
 
-const PageHeader: FC<PageHeaderProps> = ({ title, children }) => {
+const PageHeader: FC<PageHeaderProps> = ({ title, headerRight, children }) => {
   const { navigate } = useNavigation();
 
   const handleGoBack = () => {
@@ -25,7 +25,10 @@ const PageHeader: FC<PageHeaderProps> = ({ title, children }) => {
         <Image source={logoImg} resizeMode="contain" />
       </View>
 
-      <Text style={styles.title}>{title}</Text>
+      <View style={styles.header}>
+        <Text style={styles.title}>{title}</Text>
+        {headerRight}
+      </View>
 
       {children}
     </View>

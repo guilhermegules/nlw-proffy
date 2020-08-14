@@ -2309,6 +2309,13 @@
     native-url "^0.2.6"
     schema-utils "^2.6.5"
 
+"@react-native-community/async-storage@~1.11.0":
+  version "1.11.0"
+  resolved "https://tr1.jfrog.io/tr1/api/npm/npm/@react-native-community/async-storage/-/async-storage-1.11.0.tgz#bf81b8813080846f150c67f531987c429b442166"
+  integrity sha1-v4G4gTCAhG8VDGf1MZh8QptEIWY=
+  dependencies:
+    deep-assign "^3.0.0"
+
 "@react-native-community/cli-debugger-ui@^4.9.0":
   version "4.9.0"
   resolved "https://tr1.jfrog.io/tr1/api/npm/npm/@react-native-community/cli-debugger-ui/-/cli-debugger-ui-4.9.0.tgz#4177764ba69243c97aa26829d59d9501acb2bd71"
@@ -3695,6 +3702,13 @@ axios@^0.17.1:
   dependencies:
     follow-redirects "^1.2.5"
     is-buffer "^1.1.5"
+
+axios@^0.19.2:
+  version "0.19.2"
+  resolved "https://tr1.jfrog.io/tr1/api/npm/npm/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
+  integrity sha1-PqNsXYgY0NX4qKl6bTa4bNwAyyc=
+  dependencies:
+    follow-redirects "1.5.10"
 
 babel-code-frame@^6.22.0:
   version "6.26.0"

@@ -6,14 +6,6 @@ import { ClassItemProps } from '../../interfaces/teacher-item.interface';
 import './styles.css';
 import api from '../../services/proffy-services';
 
-/**
- * 
-teacher.cost.toLocaleString('pt-BR', {
-              style: 'currency',
-              currency: 'BRL',
-            })
- */
-
 const TeacherItem: FC<ClassItemProps> = ({ teacher }) => {
   const createConnection = () => {
     api.post('connections', {
