@@ -2,16 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { View, ScrollView, Text } from 'react-native';
 import { TextInput, BorderlessButton, RectButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-community/async-storage';
 
 import styles from './styles';
 import PageHeader from '../../components/PageHeader';
 import TeacherItem from '../../components/TeacherItem';
 import api from '../../services/api';
 import { Teacher } from '../../interfaces/teacher.interface';
+import { useFocusEffect } from '@react-navigation/native';
 
 const TeacherList = () => {
   const [teachers, setTeachers] = useState([]);
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState<number[]>([]);
 
   const [isFiltersVisible, setIsFiltersVisibile] = useState(false);
 
@@ -24,6 +26,8 @@ const TeacherList = () => {
   };
 
   const handleFilterSubmit = async () => {
+    loadFavorites();
+
     const response = await api.get('classes', {
       params: {
         subject,
@@ -36,7 +40,20 @@ const TeacherList = () => {
     setTeachers(response.data);
   };
 
-  useEffect(() => {}, []);
+  const loadFavorites = () => {
+    AsyncStorage.getItem('favorites').then(response => {
+      if (response) {
+        const favoritedTeachers = JSON.parse(response);
+        const favoritedTeachersIds = favoritedTeachers.map((teacher: Teacher) => teacher.id);
+
+        setFavorites(favoritedTeachersIds);
+      }
+    });
+  };
+
+  useFocusEffect(() => {
+    loadFavorites();
+  });
 
   return (
     <View style={styles.container}>
@@ -89,7 +106,7 @@ const TeacherList = () => {
 
       <ScrollView style={styles.teacherList} contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 16 }}>
         {teachers.map((teacher: Teacher) => (
-          <TeacherItem key={teacher.id} teacher={teacher} />
+          <TeacherItem key={teacher.id} teacher={teacher} favorited={favorites.includes(teacher.id)} />
         ))}
       </ScrollView>
     </View>

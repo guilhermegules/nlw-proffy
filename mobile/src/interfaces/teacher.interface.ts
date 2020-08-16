@@ -9,5 +9,6 @@ export type Teacher = {
 }
 
 export interface TeacherItemProps {
-  teacher: Teacher
+  teacher: Teacher;
+  favorited: boolean;
 }
