@@ -10,5 +10,5 @@
 ## Layout demo
 
 <p align="center">
-  <img src="./demo/Proffy.gif">
+  <img src="./demo/Proffy.gif" width="350px" height="600px">
 </p>
