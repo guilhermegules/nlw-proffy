@@ -42,7 +42,7 @@ Aplication located on `http://localhost:3000`
 ### 📨 Run Server:
 
 ```
-  # Got to bff folder
+  # Go to bff folder
   cd bff/
 
   # Install dependencies
@@ -55,5 +55,12 @@ Aplication located on `http://localhost:3000`
 ### :iphone: Run Mobile Application:
 
 ```
-  Building
+  # Go to mobile folder
+  cd mobile/
+  
+  # Install dependencies
+  npm install or yarn
+  
+  # Run mobile
+  npm run android or yarn android
 ```
